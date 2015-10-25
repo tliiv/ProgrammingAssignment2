@@ -4,6 +4,29 @@
 ## Two functions for calculating the inverse of a matrix and storing it
 ## in a cache, to speed up repeated calls. 
 
+## Some examples of use (credit Al Warren):
+
+# m <- matrix(c(-1, -2, 1, 1), 2,2)
+# 
+# x <- makeCacheMatrix(m)
+# x$get()
+# ##      [,1] [,2]
+# ## [1,]   -1    1
+# ## [2,]   -2    1
+# 
+# inv <- cacheSolve(x)
+# inv
+# ##      [,1] [,2]
+# ## [1,]    1   -1
+# ## [2,]    2   -1
+# 
+# inv <- cacheSolve(x)
+# ## getting cached data
+# inv
+# ##      [,1] [,2]
+# ## [1,]    1   -1
+# ## [2,]    2   -1
+
 
 ## Creates object for storing a matrice and its inverse in get/set style
 
